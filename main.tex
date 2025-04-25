@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[a4paper, mag=1000, left=1.5cm, right=1.5cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[colorlinks=true, citecolor=blue, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\definecolor{mypink}{RGB}{255, 230, 230}  % Светло-розовый фон
+\definecolor{myred}{RGB}{153, 0, 51}  % Темно-красный для заголовка и полоски
+
+% Оформление блока с полоской слева
+\newtcolorbox{mybox}{
+    colback=mypink,   % Фон внутри блока
+    colframe=myred,   % Цвет левой полоски
+    boxrule=4pt,      % Толщина полоски (шире = толще)
+    left=10pt,        % Отступ текста от левой полоски
+    right=5pt, top=5pt, bottom=5pt, % Отступы внутри блока
+    enhanced,         % Улучшенное отображение
+    sharp corners,    % Отключаем закругления
+    frame hidden,     % Прячем рамку (кроме левой полоски)
+}
+
+\titleformat{\section}{\Large\bfseries\centering}{}{0em}{}
+\renewcommand{\thesection}{}
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+\begin{document}
+    \thispagestyle{empty}
+
+% Оформление титульного листа
+    \begin{center}
+    {\Large\textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ}}
+        \\
+        {\Large\textbf{«НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО»}}\\[5mm]
+        {\large\text{ФАКУЛЬТЕТ ТЕХНОЛОГИЙ ИСКУССТВЕННОГО ИНТЕЛЛЕКТА}}\\[5mm]
+        \includegraphics[scale=0.14]{logo.png}\\[30mm]
+        \rule{\textwidth}{0.4mm}\\[3mm]
+        {\Large\text{Индивидуальное домашнее задание}}\\[3mm]
+        {\Large\text{по дисциплине “Математический анализ и основы вычислений”}}\\[3mm]
+        {\Large\textf{Вариант № 33}}\\[3mm]
+        \rule{\textwidth}{0.4mm}
+    \end{center}
+
+    \vfill
+
+    \begin{flushright}
+        \large Выполнил: \\
+        Студент группы J3111 \\
+        Воробьев Андрей Павлович \\
+        ИСУ: 465440 \\
+        Преподаватель: \\
+        Табиева А.В. \\
+    \end{flushright}
+
+    \vfill
+
+    \begin{center}
+        \large Санкт-Петербург \\
+        \large 2025
+    \end{center}
+
+    \newpage
+
+    \titleformat{\section}{\Large\bfseries\raggedright}{}{0em}{}
+    \titleformat{\subsection}{\large\bfseries\raggedright}{}{0em}{}
+
+    \include{work}
+
+\end{document}
+
